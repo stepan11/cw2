@@ -1,0 +1,8 @@
+.row{
+    max-width: 100%;
+}
+
+.col-md-4{
+    width: 33%;
+    display: inline-block;
+}
