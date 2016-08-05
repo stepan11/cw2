@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="">
+<html ng-app="addition">
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css" style="stylesheet">
@@ -12,8 +12,8 @@
 
         
     </head>
-    <body ng-controller="">
-        <div class="container-fluid" ng-show="">
+    <body ng-controller="EditController as edit">
+        <div class="container-fluid" ng-show="edit.product.">
 	    <div class="row">
 		<div class="col-md-4">
 		</div>
@@ -59,7 +59,7 @@
 	    </div>
         </div>
         
-        <div class="container-fluid" ng-show="">
+        <div class="container-fluid" ng-show="edit.product.">
 	    <div class="row">
 		<div class="col-md-4">
 		</div>
