@@ -12,8 +12,8 @@
 
         
     </head>
-    <body ng-controller="EditController as edit">
-        <div class="container-fluid" ng-show="edit.product.">
+    <body ng-controller="EditController as editCtrl">
+        <div class="container-fluid">
 	    <div class="row">
 		<div class="col-md-4">
 		</div>
@@ -28,7 +28,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="textinput">Login</label>  
           <div class="col-md-5">
-          <input id="textinput" name="textinput" type="text" placeholder="Login/email" class="form-control input-md">
+          <input id="textinput" name="textinput" type="text" placeholder="Login/email" class="form-control input-md" ng-model='editCtrl.log'>
           <span class="help-block">Please enter you login</span>  
           </div>
         </div>
@@ -37,7 +37,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="passwordinput">Password</label>
           <div class="col-md-5">
-            <input id="passwordinput" name="passwordinput" type="password" placeholder="Password" class="form-control input-md" required="">
+            <input id="passwordinput" name="passwordinput" type="password" placeholder="Password" class="form-control input-md" required="" ng-model='editCtrl.pass'>
             <span class="help-block">Please enter your password</span>
           </div>
         </div>
@@ -46,7 +46,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="singlebutton">Enter</label>
           <div class="col-md-4">
-            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+            <button id="singlebutton" name="singlebutton" class="btn btn-primary" ng-click="editCtrl.onSubmit()">Submit</button>
           </div>
         </div>
 
@@ -59,7 +59,7 @@
 	    </div>
         </div>
         
-        <div class="container-fluid" ng-show="edit.product.">
+        <div class="container-fluid">
 	    <div class="row">
 		<div class="col-md-4">
 		</div>
@@ -185,14 +185,17 @@
 	    </div>
         </div>
         
-        <script src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="app.js"></script>
+            
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
              
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
         
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        
         
     </body>
 </html>
